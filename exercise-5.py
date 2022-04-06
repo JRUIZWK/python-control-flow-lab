@@ -12,3 +12,21 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before it
+
+fibb = [0, 1]
+
+def fibb_seq(list):
+  count = 0
+  n0 = 0
+  n1 = 1
+  while count < 49:
+    n = n0 + n1
+    list.append(n)
+    n0 = n1
+    n1 = n
+    count += 1
+
+fibb_seq(fibb)
+
+for n in range(51):
+  print(f"term: {n} / number {fibb[n]}")
